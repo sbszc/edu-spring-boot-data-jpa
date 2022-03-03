@@ -1,4 +1,4 @@
-package com.sbszc.springbootdatajpatutorial.entity;
+package com.sbszc.eduspringbootdatajpa.entity;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.sbszc.springbootdatajpatutorial.repository;
+package com.sbszc.eduspringbootdatajpa.repository;
 
-import com.sbszc.springbootdatajpatutorial.entity.Student;
+import com.sbszc.eduspringbootdatajpa.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

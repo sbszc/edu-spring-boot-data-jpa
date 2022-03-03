@@ -1,4 +1,4 @@
-package com.sbszc.springbootdatajpatutorial.entity;
+package com.sbszc.eduspringbootdatajpa.entity;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
