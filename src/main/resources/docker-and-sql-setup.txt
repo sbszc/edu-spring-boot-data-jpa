@@ -1,0 +1,13 @@
+docker volume create edu-spring-boot-data-jpa-volume
+docker run \
+    -d \
+    -p 3306:3306 \
+    --name edu-spring-boot-data-jpa \
+    -e MYSQL_ROOT_PASSWORD=password \
+    --mount src=edu-spring-boot-data-jpa-volume,dst=/var/lib/mysql \
+    mysql
+docker exec -it edu-spring-boot-data-jpa mysql -ppassword
+
+create database edu_spring_boot_data_jpa;
+create user 'dev'@'%' identified by 'password';
+grant all on edu_spring_boot_data_jpa.* to 'dev'@'%';

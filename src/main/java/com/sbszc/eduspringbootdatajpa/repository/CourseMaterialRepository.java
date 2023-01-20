@@ -1,11 +1,10 @@
 package com.sbszc.eduspringbootdatajpa.repository;
 
+import com.sbszc.eduspringbootdatajpa.entity.CourseMaterial;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.sbszc.eduspringbootdatajpa.entity.CourseMaterial;
-
 @Repository
-public interface CourseMaterialRepository extends JpaRepository<CourseMaterial, Long>{
+public interface CourseMaterialRepository extends JpaRepository<CourseMaterial, Long> {
 
 }
