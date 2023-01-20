@@ -20,7 +20,6 @@ import lombok.NoArgsConstructor;
         @AttributeOverride(
                 name = "mobile",
                 column = @Column(name = "guardian_mobile")),
-
 })
 public class Guardian {
     private String name;

@@ -23,15 +23,12 @@ public class Student {
             strategy = GenerationType.SEQUENCE,
             generator = "seq_student")
     private Long studentId;
-
     private String firstName;
     private String lastName;
-
     @Column(
             name = "email_address",
             nullable = false)
     private String email;
-
     @Embedded
     private Guardian guardian;
 }
