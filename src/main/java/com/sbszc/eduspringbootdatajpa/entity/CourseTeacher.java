@@ -1,27 +1,33 @@
 package com.sbszc.eduspringbootdatajpa.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+
 @Entity
-@Table(name = "tbl_teacher")
-public class Teacher {
+@Table(name = "tbl_course_teacher")
+public class CourseTeacher {
     @Id
+    @Column(name = "id")
     @SequenceGenerator(
-            name = "seq_teacher",
-            sequenceName = "seq_teacher",
-            allocationSize = 1)
+            name = "seq_course_teacher",
+            allocationSize = 1
+    )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "seq_teacher")
-    private Long teacherId;
-    private String firstName;
-    private String lastName;
+            generator = "seq_course_teacher"
+    )
+    private Long courseTeacherId;
 
-//Always is better map ManyToOne than OneToMany
+    @Column(nullable = false)
+    private String name;
+
+//Is preferable to map ManyToOne than OneToMany
 //	@OneToMany(
 //			cascade = CascadeType.ALL)
 //	@JoinColumn(

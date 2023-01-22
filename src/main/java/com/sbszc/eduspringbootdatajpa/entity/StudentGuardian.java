@@ -4,11 +4,14 @@ import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+
 @Embeddable
 @AttributeOverrides({
         @AttributeOverride(
@@ -19,11 +22,10 @@ import lombok.NoArgsConstructor;
                 column = @Column(name = "guardian_email")),
         @AttributeOverride(
                 name = "mobile",
-                column = @Column(name = "guardian_mobile")),
+                column = @Column(name = "guardian_mobile"))
 })
-public class Guardian {
+public class StudentGuardian {
     private String name;
     private String email;
     private String mobile;
 }
-
